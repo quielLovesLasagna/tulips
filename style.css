@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f8e8ee;
+}
+
+.container {
+	display: flex;
+	position: relative;
+}
+
+.container::after {
+	content: "";
+	background-color: #ea8fea;
+	width: 240px;
+	height: 240px;
+	position: absolute;
+	bottom: -90px;
+	left: 50%;
+	transform: translateX(-50%);
+	clip-path: polygon(100% 0, 50% 100%, 0 0);
+}
+
+.ribbon-container {
+	position: relative;
+	bottom: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 30;
+}
+
+.ribbon {
+	width: 90px;
+	height: 40px;
+	position: absolute;
+	background-color: #ff90bc;
+	z-index: 20;
+	bottom: 0;
+}
+
+.ribbon-1 {
+	clip-path: polygon(100% 0, 0 50%, 100% 100%);
+	transform: translateX(-50%);
+}
+
+.ribbon-2 {
+	clip-path: polygon(0 0, 99% 50%, 0 100%);
+	transform: translateX(-50%);
+}
+
+.strand {
+	position: absolute;
+	width: 20px;
+	height: 80px;
+	background-color: #ff90bc;
+	clip-path: polygon(
+		0 0,
+		0 0,
+		0 40%,
+		0 100%,
+		100% 100%,
+		0 0,
+		100% 100%,
+		100% 100%,
+		69% 50%,
+		100% 0,
+		100% 0,
+		49% 0
+	);
+}
+
+.strand-1 {
+	bottom: -60px;
+	left: -30px;
+}
+
+.strand-2 {
+	bottom: -60px;
+	right: -30px;
+	transform: rotate(180deg);
+}
+
+.tulip {
+	height: 390px;
+	/* outline: 1px solid red; */
+	position: relative;
+}
+
+.tulip-1 {
+	transform: rotate(-24deg) translate(80px, 60px);
+}
+
+.tulip-3 {
+	transform: rotate(23deg) translate(-79px, 44px);
+}
+
+.tulip__head {
+	width: 170px;
+	height: 180px;
+	background: linear-gradient(to right, #febbcc, #f875aa);
+	border-radius: 0 0 50% 50%;
+	position: relative;
+}
+
+.tulip__hair {
+	width: 90px;
+	height: 160px;
+	position: absolute;
+	top: -35px;
+	border-radius: 90% 0 90% 0;
+}
+
+.tulip__hair-1 {
+	background-color: #ff8dc7;
+	left: 0;
+	transform: rotate(135deg);
+}
+
+.tulip__hair-2 {
+	background-color: #ffacc7;
+	left: 25%;
+	z-index: 10;
+	transform: rotate(-25deg);
+}
+
+.tulip__hair-3 {
+	background-color: #ffb9b9;
+	right: 0;
+	transform: rotate(180deg);
+}
+
+.stem {
+	width: 10px;
+	height: 235px;
+	background-color: #79ac78;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
